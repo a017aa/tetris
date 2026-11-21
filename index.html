@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:,">
+  <title>MY TETRIS — Arcade Edition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <main class="cabinet" id="cabinet">
+
+    <header class="marquee">
+      <div class="marquee-light" aria-hidden="true"></div>
+      <h1 class="logo" data-text="TETRIS">TETRIS</h1>
+      <p class="tagline">ARCADE EDITION</p>
+    </header>
+
+    <section class="deck">
+
+      <div class="screen-housing">
+        <div class="screen" id="screen">
+          <canvas id="playfield" width="300" height="600"></canvas>
+
+          <div class="crt" aria-hidden="true">
+            <div class="crt-mask"></div>
+            <div class="crt-scanlines"></div>
+            <div class="crt-glare"></div>
+            <div class="crt-vignette"></div>
+          </div>
+
+          <div class="start-screen" id="start-screen">
+            <div class="start-inner">
+              <p class="coin">INSERT COIN</p>
+              <p class="ready">READY TO PLAY?</p>
+              <button class="press" id="start-btn" type="button">PRESS <b>ENTER</b></button>
+              <p class="start-hint">PRESS ENTER OR CLICK</p>
+            </div>
+            <p class="start-credits">© 2026 MY TETRIS</p>
+          </div>
+
+          <div class="gameover-hint" id="gameover-hint">
+            <p>PRESS <b>ENTER</b> TO PLAY AGAIN</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hud">
+        <section class="panel panel-hold">
+          <h2>HOLD</h2>
+          <canvas id="hold-canvas" width="120" height="120"></canvas>
+        </section>
+
+        <section class="panel panel-next">
+          <h2>NEXT</h2>
+          <canvas id="next-canvas" width="120" height="480"></canvas>
+        </section>
+
+        <section class="panel panel-stats">
+          <div class="stat">
+            <span>SCORE</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat">
+            <span>LEVEL</span>
+            <strong id="level">1</strong>
+          </div>
+          <div class="stat">
+            <span>LINES</span>
+            <strong id="lines">0</strong>
+          </div>
+        </section>
+
+        <p class="keys">M · SOUND</p>
+      </aside>
+    </section>
+
+    <footer class="control-panel">
+      <div class="joystick" aria-hidden="true">
+        <div class="stick-base"></div>
+        <div class="stick"></div>
+        <div class="stick-ball"></div>
+      </div>
+
+      <div class="btn-cluster" aria-hidden="true">
+        <span class="arcade-btn btn-a"></span>
+        <span class="arcade-btn btn-b"></span>
+        <span class="arcade-btn btn-c"></span>
+      </div>
+
+      <div class="vents" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="tetris_logic.js"></script>
+  <script src="renderer.js"></script>
+  <script src="controller.js"></script>
+  <script src="audio.js"></script>
+  <script src="my_tetris.js"></script>
+</body>
+</html>
