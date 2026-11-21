@@ -65,7 +65,7 @@ The project is split into small, single-responsibility modules so that the game 
 No build step and no dependencies. The only requirement is **Node.js 18+** (used purely as a static file server; it ships with `http`, `fs` and `path`).
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/a017aa/tetris
 cd my_tetris
 node html_server.js
 ```
